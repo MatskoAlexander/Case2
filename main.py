@@ -7,26 +7,29 @@ S5 = 0.33
 S6 = 0.35
 S7 = 0.396
 
-personalD1 = 9075
-personalD2 = 36900
-personalD3 = 89350
-personalD4 = 186350
-personalD5 = 405100
-personalD6 = 406750
+personalD1 = 0
+personalD2 = 9075
+personalD3 = 36900
+personalD4 = 89350
+personalD5 = 186350
+personalD6 = 405100
+personalD7 = 406750
 
-familyD1 = 2 * personalD1
-familyD2 = 2 * personalD2
-familyD3 = 148850
-familyD4 = 226850
-familyD5 = personalD5
-familyD6 = 457600
+familyD1 = 0
+familyD2 = 2 * personalD1
+familyD3 = 2 * personalD2
+familyD4 = 148850
+familyD5 = 226850
+familyD6 = personalD5
+familyD7 = 457600
 
-singleparentD1 = 12950
-singleparentD2 = 49400
-singleparentD3 = 127550
-singleparentD4 = 206600
-singleparentD5 = personalD5
-singleparentD6 = 432200
+singleparentD1 = 0
+singleparentD2 = 12950
+singleparentD3 = 49400
+singleparentD4 = 127550
+singleparentD5 = 206600
+singleparentD6 = personalD5
+singleparentD7 = 432200
 
 # TODO: формулы
 
