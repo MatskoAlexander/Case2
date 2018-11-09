@@ -1,4 +1,7 @@
 # TODO: входные данные
+individual = str(input('personal, family, singleparent?'))
+monthly_income = float(input())
+
 S1 = 0.1
 S2 = 0.15
 S3 = 0.25
@@ -31,7 +34,13 @@ singleparentD5 = 206600
 singleparentD6 = personalD5
 singleparentD7 = 432200
 
+
 # TODO: формулы
 
+if individual == 'personal':
+
+elif individual == 'family':
+
+    
 # TODO: вывод, по вопросу задачи
 
