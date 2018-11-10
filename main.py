@@ -1,20 +1,25 @@
 import local
 
+# TODO: входные данные
+
 language = str(input(local.Choose_language))
+
 if language == local.language1:
     ind = local.Choose_individual1
     M_I = local.Read_monthly_income1
     Tax_Error = local.TaxError1
-    name_month = [JAN, FAB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC]
+    name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+    Question = local.question1
+
 elif language == local.language2:
     ind = local.Choose_individual2
     M_I = local.Read_monthly_income2
     Tax_Error = local.TaxError2
-    name_month = [ЯНВ, ФЕВ, МАР, АПР, МАЙ, ИЮН, ИЮЛ, АВГ, СЕН, ОКТ, НОЯ, ДЕК]
+    name_month = ['ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК']
+    Question = local.question2
+
 else:
     print(local.langError)
-
-# TODO: входные данные
 
 individual = str(input(ind))
 
@@ -53,21 +58,33 @@ singleparentD7 = 432200
 
 
 # TODO: формулы
+
+
+
+
 D = 0
 print(M_I)
 for month in range(12):
-    print('{} {}: '.format(QUESTION,name_month[month], end =''))
+    print('{} {}?: '.format(Question,name_month[month]))
     monthly_income = float(input())
     D = D + monthly_income
 
+
 if individual == local.p1 or individual == local.p2:
+    pass
 
 elif individual == local.f1 or individual == local.f2:
+    pass
 
 elif individual == local.sp1 or individual == local.sp2:
+    pass
 
 else:
     print(Tax_Error)
+
+
+
+
 
 
 # TODO: вывод, по вопросу задачи
