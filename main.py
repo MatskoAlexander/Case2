@@ -10,6 +10,7 @@ if language == local.language1:
     Tax_Error = local.TaxError1
     name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
     Question = local.question1
+    printN = local.N1
 
 elif language == local.language2:
     ind = local.Choose_individual2
@@ -17,6 +18,7 @@ elif language == local.language2:
     Tax_Error = local.TaxError2
     name_month = ['ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК']
     Question = local.question2
+    printN = local.N2
 
 else:
     print(local.langError)
@@ -129,4 +131,4 @@ else:
 
 
 # TODO: вывод, по вопросу задачи
-print(D)
+print(printN, N)
