@@ -1,3 +1,8 @@
+"""Case-study #2
+Developers:
+Shunina A (40%), Matsko A (41%), Bakulina A(40%)"""
+
+
 import local
 
 # TODO: входные данные
@@ -25,38 +30,13 @@ else:
 
 individual = str(input(ind))
 
+S = [0.1, 0.15, 0.25, 0.28, 0.33, 0.35, 0.396]
 
-S1 = 0.1
-S2 = 0.15
-S3 = 0.25
-S4 = 0.28
-S5 = 0.33
-S6 = 0.35
-S7 = 0.396
+personal = [0, 9075, 36900, 89350, 186350, 405100, 406750]
 
-personalD1 = 0
-personalD2 = 9075
-personalD3 = 36900
-personalD4 = 89350
-personalD5 = 186350
-personalD6 = 405100
-personalD7 = 406750
+family = [0, 18151, 73801, 148850, 226850, 405100, 457600]
 
-familyD1 = 0
-familyD2 = 2 * personalD1
-familyD3 = 2 * personalD2
-familyD4 = 148850
-familyD5 = 226850
-familyD6 = personalD5
-familyD7 = 457600
-
-singleparentD1 = 0
-singleparentD2 = 12950
-singleparentD3 = 49400
-singleparentD4 = 127550
-singleparentD5 = 206600
-singleparentD6 = personalD5
-singleparentD7 = 432200
+singleparent = [0, 12950, 49400, 127550, 206600, 405100, 432200]
 
 
 # TODO: формулы
@@ -71,63 +51,64 @@ for month in range(12):
     monthly_income = float(input())
     D = D + monthly_income
 
-
 if individual == local.p1 or individual == local.p2:
-    if personalD1 < D < personalD2:
-        N = S1 * (D - personalD1)
-    elif personalD2 < D < personalD3:
-        N = S1 * (personalD2 - personalD1) + S2 * (D - personalD2)
-    elif personalD3 < D < personalD4:
-        N = S1 * (personalD2 - personalD1) + S2 * (personalD3 - personalD2) + S3 * (D - personalD3)
-    elif personalD4 < D < personalD5:
-        N = S1 * (personalD2 - personalD1) + S2 * (personalD3 - personalD2) + S3 * (personalD4 - personalD3) + S4 * (
-                D - personalD4)
-    elif personalD5 < D < personalD6:
-        N = S1 * (personalD2 - personalD1) + S2 * (personalD3 - personalD2) + S3 * (personalD4 - personalD3) + S4 * (
-                personalD5 - personalD4) + S5 * (D - personalD5)
+    if personal[0] < D < personal[1]:
+        N = S[1] * (D - personal[0])
+    elif personal[1] < D < personal[2]:
+        N = S[1] * (personal[1] - personal[0]) + S[2] * (D - personal[1])
+    elif personal[2] < D < personal[3]:
+        N = S[1] * (personal[1] - personal[0]) + S[2] * (personal[2] - personal[1]) + S[3] * (D - personal[2])
+    elif personal[3] < D < personal[4]:
+        N = S[1] * (personal[1] - personal[0]) + S[2] * (personal[2] - personal[1]) + S[3] * (
+                personal[3] - personal[2]) + S[4] * (D - personal[3])
+    elif personal[4] < D < personal[5]:
+        N = S[1] * (personal[1] - personal[0]) + S[2] * (personal[2] - personal[1]) + S[3] * (
+                personal[3] - personal[2]) + S[4] * (personal[4] - personal[3]) + S[5] * (D - personal[4])
     else:
-        N = S1 * (personalD2 - personalD1) + S2 * (personalD3 - personalD2) + S3 * (personalD4 - personalD3) + S4 * (
-                personalD5 - personalD4) + S5 * (personalD6 - personalD5) + S6 * (D - personalD6)
+        N = S[1] * (personal[1] - personal[0]) + S[2] * (personal[2] - personal[1]) + S[3] * (
+                personal[3] - personal[2]) + S[4] * (personal[4] - personal[3]) + S[5] * (
+                personal[5] - personal[4]) + S[6] * (D - personal[5])
+
 
 elif individual == local.f1 or individual == local.f2:
-    if familyD1 < D < familyD2:
-        N = S1 * (D - familyD1)
-    elif familyD2 < D < familyD3:
-        N = S1 * (familyD2 - familyD1) + S2 * (D - familyD2)
-    elif familyD3 < D < familyD4:
-        N = S1 * (familyD2 - familyD1) + S2 * (familyD3 - familyD2) + S3 * (D - familyD3)
-    elif familyD4 < D < familyD5:
-        N = S1 * (familyD2 - familyD1) + S2 * (familyD3 - familyD2) + S3 * (familyD4 - familyD3) + S4 * (
-                D - familyD4)
-    elif familyD5 < D < familyD6:
-        N = S1 * (familyD2 - familyD1) + S2 * (familyD3 - familyD2) + S3 * (familyD4 - familyD3) + S4 * (
-                familyD5 - familyD4) + S5 * (D - familyD5)
+    if family[0] < D < family[1]:
+        N = S[1] * (D - family[1])
+    elif family[2] < D < family[3]:
+        N = S[1] * (family[2] - family[1]) + S[2] * (D - family[2])
+    elif family[3] < D < family[4]:
+        N = S[1] * (family[2] - family[1]) + S[2] * (family[3] - family[2]) + S[3] * (D - family[3])
+    elif family[4] < D < family[5]:
+        N = S[1] * (family[2] - family[1]) + S[2] * (family[3] - family[2]) + S[3] * (family[4] - family[3]) + S[4] * (
+                D - family[4])
+    elif family[5] < D < family[6]:
+        N = S[1] * (family[2] - family[1]) + S[2] * (family[3] - family[2]) + S[3] * (family[4] - family[3]) + S[4] * (
+                family[5] - family[4]) + S[5] * (D - family[5])
     else:
-        N = S1 * (familyD2 - familyD1) + S2 * (familyD3 - familyD2) + S3 * (familyD4 - familyD3) + S4 * (
-                familyD5 - familyD4) + S5 * (familyD6 - familyD5) + S6 * (D - familyD6)
+        N = S[1] * (family[2] - family[1]) + S[2] * (family[3] - family[2]) + S[3] * (family[4] - family[3]) + S[4] * (
+                family[5] - family[4]) + S[5] * (family[6] - family[5]) + S[6] * (D - family[6])
 
 elif individual == local.sp1 or individual == local.sp2:
-    if singleparentD1 < D < singleparentD2:
-        N = S1 * (D - singleparentD1)
-    elif singleparentD2 < D < singleparentD3:
-        N = S1 * (singleparentD2 - singleparentD1) + S2 * (D - singleparentD2)
-    elif singleparentD3 < D < singleparentD4:
-        N = S1 * (singleparentD2 - singleparentD1) + S2 * (singleparentD3 - singleparentD2) + S3 * (D - singleparentD3)
-    elif singleparentD4 < D < singleparentD5:
-        N = S1 * (singleparentD2 - singleparentD1) + S2 * (singleparentD3 - singleparentD2) + S3 * (
-                singleparentD4 - singleparentD3) + S4 * (D - singleparentD4)
-    elif singleparentD5 < D < singleparentD6:
-        N = S1 * (singleparentD2 - singleparentD1) + S2 * (singleparentD3 - singleparentD2) + S3 * (
-                singleparentD4 - singleparentD3) + S4 * (singleparentD5 - singleparentD4) + S5 * (D - singleparentD5)
+    if singleparent[0] < D < singleparent[1]:
+        N = S[1] * (D - singleparent[0])
+    elif singleparent[1] < D < singleparent[2]:
+        N = S[1] * (singleparent[1] - singleparent[0]) + S[2] * (D - singleparent[1])
+    elif singleparent[2] < D < singleparent[3]:
+        N = S[1] * (singleparent[1] - singleparent[0]) + S[2] * (singleparent[2] - singleparent[1]) + S[3] * (
+                D - singleparent[2])
+    elif singleparent[3] < D < singleparent[4]:
+        N = S[1] * (singleparent[1] - singleparent[0]) + S[2] * (singleparent[2] - singleparent[1]) + S[3] * (
+                singleparent[3] - singleparent[2]) + S[4] * (D - singleparent[3])
+    elif singleparent[4] < D < singleparent[5]:
+        N = S[1] * (singleparent[1] - singleparent[0]) + S[2] * (singleparent[2] - singleparent[1]) + S[3] * (
+                singleparent[3] - singleparent[2]) + S[4] * (singleparent[4] - singleparent[3]) + S[5] * (
+                D - singleparent[4])
     else:
-        N = S1 * (singleparentD2 - singleparentD1) + S2 * (singleparentD3 - singleparentD2) + S3 * (
-                singleparentD4 - singleparentD3) + S4 * (singleparentD5 - singleparentD4) + S5 * (
-                singleparentD6 - singleparentD5) + S6 * (D - singleparentD6)
+        N = S[1] * (singleparent[1] - singleparent[0]) + S[2] * (singleparent[2] - singleparent[1]) + S[3] * (
+                singleparent[3] - singleparent[2]) + S[4] * (singleparent[4] - singleparent[3]) + S[5] * (
+                singleparent[5] - singleparent[4]) + S[6] * (D - singleparent[5])
 
 else:
     print(Tax_Error)
-
-
 
 
 # TODO: вывод, по вопросу задачи
