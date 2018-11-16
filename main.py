@@ -12,7 +12,8 @@ if language == local.language1:
     ind = local.Choose_individual1
     M_I = local.Read_monthly_income1
     Tax_Error = local.TaxError1
-    name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+    name_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+                  'November', 'December']
     Question = local.question1
     printN = local.N1
 
@@ -20,7 +21,8 @@ elif language == local.language2:
     ind = local.Choose_individual2
     M_I = local.Read_monthly_income2
     Tax_Error = local.TaxError2
-    name_month = ['ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК']
+    name_month = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь',
+                  'Ноябрь', 'Декабрь']
     Question = local.question2
     printN = local.N2
 
