@@ -6,7 +6,7 @@ Shunina A (40%), Matsko A (41%), Bakulina A(40%)"""
 import local
 
 
-language = str(input(local.Choose_language))
+language = str(input(local.Choose_language)) #User selects language
 
 if language == local.language1:
     ind = local.Choose_individual1
@@ -16,6 +16,7 @@ if language == local.language1:
                   'November', 'December']
     Question = local.question1
     printN = local.N1
+    thnks = local.thanks1
 
 elif language == local.language2:
     ind = local.Choose_individual2
@@ -25,11 +26,12 @@ elif language == local.language2:
                   'Ноябрь', 'Декабрь']
     Question = local.question2
     printN = local.N2
+    thnks = local.thanks2
 
 else:
     print(local.langError)
 
-individual = str(input(ind))
+individual = str(input(ind))                        #input
 
 S = [0.1, 0.15, 0.25, 0.28, 0.33, 0.35, 0.396]
 
@@ -43,7 +45,7 @@ singleparent = [0, 12950, 49400, 127550, 206600, 405100, 432200]
 
 
 D = 0
-print(M_I)
+print(M_I)                                                          #formulas
 for month in range(12):
     print('{} {}?: '.format(Question,name_month[month]))
     monthly_income = float(input())
@@ -109,4 +111,5 @@ else:
     print(Tax_Error)
 
 
-print(printN, N)
+print(printN, N)    #output
+print(thnks)
